@@ -1,3 +1,23 @@
-#heading {
-    color: aqua;
+
+.header{
+    display: flex;
+    justify-content:space-between ;
+}
+
+.logo{
+    width:180px;
+    position: relative;
+    top: -45px; 
+    left: -20px; 
+}
+
+.nav-items > ul {
+    display: flex;
+    list-style-type: none;
+    margin-top: 5px;
+}
+
+.nav-items > ul > li {
+    padding: 10px;
+    margin: 10px;
 }
