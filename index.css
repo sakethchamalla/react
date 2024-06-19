@@ -1,23 +1,147 @@
-
-.header{
+.header {
     display: flex;
-    justify-content:space-between ;
+    justify-content: space-between;
+    align-items: center;
+    border-bottom: 2px solid #f0f0f0; /* Subtle border at the bottom */
+    background-color: #ffffff; /* Background color for the header */
+    height: 80px;
+    padding: 0 20px; /* Adjusted padding */
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.1); /* Subtle shadow to lift the header */
 }
 
-.logo{
-    width:180px;
-    position: relative;
-    top: -45px; 
-    left: -20px; 
+.logo-container {
+    flex: 0 0 auto; /* Prevents logo from growing or shrinking */
+}
+
+.logo {
+    width: 160px;
+    height: auto;
+}
+
+.header-title {
+    flex: 1; /* Takes remaining space */
+    display: flex;
+    justify-content: center; /* Center align content horizontally */
+    align-items: center; /* Center align content vertically */
+}
+
+.header-title-text {
+    font-family: 'cursive', cursive; /* Choose a cursive font */
+    font-size: 48px;
+    color: #F72798; /* Your specified color */
 }
 
 .nav-items > ul {
+    font-size: 20px;
     display: flex;
     list-style-type: none;
-    margin-top: 5px;
+    margin: 0; /* Remove default margin */
+    padding: 0; /* Remove default padding */
+    color: #F72798;
 }
 
 .nav-items > ul > li {
     padding: 10px;
     margin: 10px;
+}
+
+
+.body {
+    padding: 20px; /* Added padding */
+}
+
+.Search {
+    padding: 10px;
+}
+
+.restro-cards {
+    display: grid;
+    grid-template-columns: repeat(4, 1fr); /* Four columns */
+    gap: 20px; /* Gap between cards */
+    justify-content: center; /* Center cards horizontally */
+    color: #F72798;
+}
+
+.res-card {
+    width: 100%; /* Full width of each grid cell */
+    max-width: 250px; /* Maximum width of each card */
+    border: 1px solid transparent;
+    display: flex;
+    flex-direction: column;
+    box-sizing: border-box;
+    transition: transform 0.3s, border 0.3s;
+    position: relative;
+    box-shadow: 0 2px 5px rgba(0, 0, 0, 0.15);
+    border-radius: 10px;
+    overflow: hidden;
+    margin-bottom: 20px; /* Space between rows of cards */
+}
+
+.res-card:hover {
+    border: 1px solid lightgray;
+    transform: scale(1.05);
+}
+
+.res-logo {
+    width: 100%;
+    height: 120px; /* Adjusted height */
+    object-fit: cover;
+    border-bottom: 1px solid #ddd;
+}
+
+.res-card-details {
+    flex-grow: 1;
+    width: 100%;
+    padding: 10px;
+    text-align: left;
+    display: flex;
+    flex-direction: column;
+    justify-content: space-between;
+    box-sizing: border-box;
+}
+
+.res-card h3 {
+    margin: 5px 0;
+    font-size: 16px; /* Adjusted font size */
+}
+
+.res-card p {
+    margin: 5px 0;
+    font-size: 14px; /* Adjusted font size */
+    color: #555;
+}
+
+.rating-eta {
+    display: flex;
+    justify-content: space-between;
+    align-items: center;
+    width: 100%;
+    padding: 5px 0; /* Adjusted padding */
+    font-size: 12px; /* Adjusted font size */
+    box-sizing: border-box;
+}
+
+.rating {
+    display: flex;
+    align-items: center;
+    background-color: #F72798;
+    color: white;
+    padding: 2px 5px;
+    border-radius: 5px;
+    margin-right: auto; /* Moved to the right */
+}
+
+.rating::after {
+    content: " ★";
+    margin-left: 3px;
+}
+
+.eta {
+    color: #555;
+    white-space: nowrap;
+    margin-left: auto; /* Moved to the left */
+}
+
+.Search {
+    padding: 10px;
 }
